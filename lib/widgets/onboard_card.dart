@@ -13,7 +13,7 @@ class OnBoardCard extends StatelessWidget {
   final Function onPressed;
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: MediaQuery.sizeOf(context).height * 0.80,
       width: MediaQuery.sizeOf(context).width,
       child: Column(

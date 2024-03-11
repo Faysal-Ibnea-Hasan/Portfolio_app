@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learning_phase1/widgets/cv_page.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatelessWidget {
@@ -68,6 +69,19 @@ class HomePage extends StatelessWidget {
             },
             tooltip: 'CV',
             child: const Icon(Icons.picture_as_pdf),
+          ),
+          const SizedBox(
+            width: 10,
+          ),
+          FloatingActionButton(
+            onPressed: () async {
+              final prefs = await SharedPreferences.getInstance();
+              prefs.setBool('onboarding', false);//make the state for onboarding false so that onBoard pages reappear
+            },
+            tooltip: 'Enable shared preference',
+            child: const Icon(
+              Icons.first_page,
+            ),
           ),
         ],
       ),

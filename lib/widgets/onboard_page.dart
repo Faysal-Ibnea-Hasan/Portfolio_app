@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:learning_phase1/main.dart';
 import 'package:learning_phase1/widgets/onboard_card.dart';
 import 'package:learning_phase1/widgets/tab_bar.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoard extends StatefulWidget {
-  const OnBoard({super.key});
+  const OnBoard({super.key,  this.onboarding = false});
+  final bool onboarding;
   @override
   State<OnBoard> createState() => _OnBoardState();
 }
@@ -46,11 +48,14 @@ class _OnBoardState extends State<OnBoard> {
       description:
           'If you have any queries related to my work feel free to reach me 24/7.',
       buttonText: 'Done',
-      onPressed: () {
+      onPressed: () async {
+        final pres = await SharedPreferences.getInstance();
+        pres.setBool('onboarding', true);//set the onboarding state true it means onBoarding screens showed once
+
         navigatorKey.currentState?.pushReplacement(
           MaterialPageRoute(
             builder: (ctx) => const TabBarExample(),
-          ),//when you need to use navigation outside the build context
+          ), //when you need to use navigation outside the build context
         );
       },
     ),
