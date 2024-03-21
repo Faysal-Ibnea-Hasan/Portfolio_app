@@ -41,6 +41,7 @@ dependencies:
   pdfx: ^2.6.0
   smooth_page_indicator: ^1.1.0
   shared_preferences: ^2.2.2
+  font_awesome_flutter: ^10.7.0
   
 
 dev_dependencies:
@@ -80,6 +81,16 @@ flutter:
     - lib/assets/images/Reach.png
     - lib/assets/images/hire.png
     - lib/assets/pdfs/Faysal_Ibnea_Hasan_Cv_.pdf
+    - lib/assets/images/Bashabari_admin.png
+    - lib/assets/images/Bashabari.png
+    - lib/assets/images/khobor.png
+    - lib/assets/images/textutilis.png
+    - lib/assets/images/expense_tracker.jpeg
+    - lib/assets/images/recipe.jpeg
+    - lib/assets/images/whatsapp.jpeg
+    - lib/assets/images/portfolio.jpeg
+    - lib/assets/images/todo.jpeg
+    - lib/assets/images/weather.png
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

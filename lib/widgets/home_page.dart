@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
             const CircleAvatar(
               backgroundImage: AssetImage("lib/assets/images/Cv_pic.png"),
               radius: 50,
-              backgroundColor: Colors.black12,
+              
             ),
             Container(
               margin: const EdgeInsets.only(top: 10),
@@ -74,6 +74,7 @@ class HomePage extends StatelessWidget {
             width: 10,
           ),
           FloatingActionButton(
+            
             onPressed: () async {
               final prefs = await SharedPreferences.getInstance();
               prefs.setBool('onboarding', false);//make the state for onboarding false so that onBoard pages reappear

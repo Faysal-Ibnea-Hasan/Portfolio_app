@@ -27,6 +27,17 @@ class ExpertisePage extends StatelessWidget {
                           height: 100,
                           width: 100,
                         ),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
+                        ),
+                        const SizedBox(
+                          width: 100,
+                          height: 20,
+                          child: Text(
+                            'Flutter',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -44,6 +55,17 @@ class ExpertisePage extends StatelessWidget {
                           'lib/assets/images/laravel.png',
                           height: 100,
                           width: 100,
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
+                        ),
+                        const SizedBox(
+                          width: 100,
+                          height: 20,
+                          child: Text(
+                            'Laravel',
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ],
                     ),
@@ -67,6 +89,17 @@ class ExpertisePage extends StatelessWidget {
                           height: 100,
                           width: 100,
                         ),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
+                        ),
+                        const SizedBox(
+                          width: 100,
+                          height: 20,
+                          child: Text(
+                            'Post-man',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -84,6 +117,17 @@ class ExpertisePage extends StatelessWidget {
                           'lib/assets/images/mysql.png',
                           height: 100,
                           width: 100,
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
+                        ),
+                        const SizedBox(
+                          width: 100,
+                          height: 20,
+                          child: Text(
+                            'MySQL',
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ],
                     ),
@@ -107,6 +151,17 @@ class ExpertisePage extends StatelessWidget {
                           height: 100,
                           width: 100,
                         ),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
+                        ),
+                        const SizedBox(
+                          width: 100,
+                          height: 20,
+                          child: Text(
+                            'API',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -124,6 +179,17 @@ class ExpertisePage extends StatelessWidget {
                           'lib/assets/images/github.png',
                           height: 100,
                           width: 100,
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
+                        ),
+                        const SizedBox(
+                          width: 100,
+                          height: 20,
+                          child: Text(
+                            'Github',
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ],
                     ),
@@ -147,6 +213,17 @@ class ExpertisePage extends StatelessWidget {
                           height: 100,
                           width: 100,
                         ),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
+                        ),
+                        const SizedBox(
+                          width: 100,
+                          height: 20,
+                          child: Text(
+                            'Adobe XD',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -164,6 +241,17 @@ class ExpertisePage extends StatelessWidget {
                           'lib/assets/images/figma.png',
                           height: 100,
                           width: 100,
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
+                        ),
+                        const SizedBox(
+                          width: 100,
+                          height: 20,
+                          child: Text(
+                            'Figma',
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ],
                     ),

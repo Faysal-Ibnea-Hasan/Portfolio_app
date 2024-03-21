@@ -8,13 +8,13 @@ class EducationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<String> items = [
       'Secondary School Certificate (SSC)',
-      'Higher Secondery Certificate (HSC)',
+      'Higher Secondary Certificate (HSC)',
       'Bsc in Computer Science & Engineering',
     ];
     final List<String> date = [
       '2016',
       '2018',
-      '2024',
+      '2020-2024',
     ];
     final List<String> grade = [
       'Grade: 5.00/5.00',
@@ -41,24 +41,39 @@ class EducationPage extends StatelessWidget {
           ),
           child: Container(
             alignment: Alignment.center,
-            height: 100,
+            height: 200,
             width: MediaQuery.of(context).size.width,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(
-                  Icons.grade,
-                ),
-                Text(
-                  items[index],
-                  style: const TextStyle(
-                      fontSize: 15, fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  date[index],
-                ),
-                Text(
-                  grade[index],
+                SizedBox(
+                  height: 150,
+                  width:  MediaQuery.of(context).size.width,
+                  child: Card(
+                    elevation: 2,
+                    borderOnForeground: true,
+                    shadowColor: Colors.blueAccent,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Icon(
+                          Icons.grade,
+                        ),
+                        Text(
+                          items[index],
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                              fontSize: 15, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          date[index],
+                        ),
+                        Text(
+                          grade[index],
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               ],
             ),

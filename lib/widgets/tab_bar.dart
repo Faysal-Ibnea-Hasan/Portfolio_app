@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:learning_phase1/widgets/education_page.dart';
 import 'package:learning_phase1/widgets/expertise_page.dart';
 import 'package:learning_phase1/widgets/home_page.dart';
+import 'package:learning_phase1/widgets/project_page.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class TabBarExample extends StatelessWidget {
   const TabBarExample({super.key});
+
+  final Color color = const Color.fromARGB(160, 255, 255, 255);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,13 +22,18 @@ class TabBarExample extends StatelessWidget {
         length: 4,
         child: Scaffold(
           appBar: AppBar(
-            title: const Text('Flutter'),
+            title: const Text(
+              'Portfolio',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
             flexibleSpace: Container(
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
                     Colors.blue,
-                    Colors.greenAccent,
+                    Color.fromARGB(255, 135, 107, 165),
                   ],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
@@ -32,22 +42,51 @@ class TabBarExample extends StatelessWidget {
             ),
             elevation: 20,
             shadowColor: Colors.grey,
-            leading: const Icon(Icons.menu),
+            // leading: Icon(Icons.menu,color: color,),
             actions: [
               IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.ac_unit),
+                onPressed: () {
+                  const link = "https://www.linkedin.com/in/faysal-hasan-dev/";
+                  launchUrl(
+                    Uri.parse(link),
+                    mode: LaunchMode.platformDefault
+                  );
+                },
+                icon: Icon(
+                  FontAwesomeIcons.linkedin,
+                  color: color,
+                ),
               ),
               IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.notification_add),
+                onPressed: () {
+                  const link = "https://github.com/Faysal-Ibnea-Hasan";
+                  launchUrl(
+                    Uri.parse(link),
+                    mode: LaunchMode.platformDefault
+                  );
+                },
+                icon: Icon(
+                  FontAwesomeIcons.github,
+                  color: color,
+                ),
               ),
               IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.search),
+                onPressed: () {
+                  const link = "https://www.instagram.com/faysal_ibnea_hasan/";
+                  launchUrl(
+                    Uri.parse(link),
+                    mode: LaunchMode.platformDefault
+                  );
+                  
+                },
+                icon: Icon(
+                  FontAwesomeIcons.instagram,
+                  color: color,
+                ),
               ),
             ],
             bottom: TabBar(
+              indicatorColor: color,
               padding: const EdgeInsets.only(left: 5),
               tabAlignment: TabAlignment.start,
               //indicatorColor: Colors.black,
@@ -56,41 +95,57 @@ class TabBarExample extends StatelessWidget {
                   height: 100,
                   icon: IconButton(
                     onPressed: () {},
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.home,
+                      color: color,
                     ),
                   ),
-                  text: 'Home',
+                  child: const Text(
+                    'Home',
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
                 Tab(
                   height: 100,
                   icon: IconButton(
                     onPressed: () {},
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.book,
+                      color: color,
                     ),
                   ),
-                  text: 'Expertise',
+                  child: const Text(
+                    'Expertise',
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
                 Tab(
                   height: 100,
                   icon: IconButton(
                     onPressed: () {},
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.cast_for_education,
+                      color: color,
                     ),
                   ),
-                  text: 'Education',
+                  child: const Text(
+                    'Education',
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
                 Tab(
                   height: 100,
                   icon: IconButton(
                     onPressed: () {},
-                    icon: const Icon(
-                      Icons.settings,
+                    icon: Icon(
+                      Icons.work,
+                      color: color,
                     ),
                   ),
-                  text: 'Settings',
+                  child: const Text(
+                    'Projects',
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ],
               isScrollable: true,
@@ -106,7 +161,7 @@ class TabBarExample extends StatelessWidget {
               HomePage(),
               ExpertisePage(),
               EducationPage(),
-              ForthPage(),
+              ProjectPage(),
             ],
           ),
         ),
@@ -115,19 +170,4 @@ class TabBarExample extends StatelessWidget {
   }
 }
 
-class ForthPage extends StatelessWidget {
-  const ForthPage({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: SizedBox(
-        height: 100,
-        width: 100,
-        child: Text(
-          'Settings',
-          textAlign: TextAlign.center,
-        ),
-      ),
-    );
-  }
-}
+
