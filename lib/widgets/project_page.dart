@@ -29,7 +29,7 @@ class _ProjectPageState extends State<ProjectPage> {
       title: 'Weather app',
       description:
           'A simple weather web-application using Vue.js using open weather api ',
-      githubUrl: 'https://github.com/Faysal-Ibnea-Hasan/Whatsapp',
+      githubUrl: 'https://github.com/Faysal-Ibnea-Hasan/Vue-Weather',
     ),
   ];
   List<ProjectCard> flutter = [
