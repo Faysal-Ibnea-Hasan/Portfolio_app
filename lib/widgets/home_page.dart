@@ -24,26 +24,187 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            const Padding(
-              padding: EdgeInsets.only(top: 10),
-            ),
-            const CircleAvatar(
-              backgroundImage: AssetImage("lib/assets/images/Cv_pic.png"),
-              radius: 50,
-              
-            ),
-            Container(
-              margin: const EdgeInsets.only(top: 10),
-              height: 100,
-              child: const Text(
-                "Hi! I am Faysal Ibnea Hasan. I am a flutter developer. I have been satisfying my hunger of creation through software development since 2022.",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
+            Center(
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.deepPurple[50],
+                  borderRadius: BorderRadius.circular(
+                    10,
+                  ),
+                ),
+                margin: const EdgeInsets.only(right: 10, left: 10),
+                child: Row(
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(right: 15.0, left: 15.0),
+                      child: CircleAvatar(
+                        backgroundImage:
+                            AssetImage("lib/assets/images/Cv_pic.png"),
+                        radius: 50,
+                      ),
+                    ),
+                    Container(
+                      alignment: Alignment.center,
+                      height: 150,
+                      width: MediaQuery.of(context).size.width * 0.5,
+                      child: const Text(
+                        "Hi! I am a flutter developer. I have been satisfying my hunger of creation through software development since 2022.",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.deepPurple[50],
+                borderRadius: BorderRadius.circular(
+                  10,
+                ),
+              ),
+              height: 75,
+              margin: const EdgeInsets.all(10),
+              child: const Center(
+                child: Text(
+                  'Personal Details',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 24,
+                      fontStyle: FontStyle.italic),
+                ),
+              ),
+            ),
+            GridView.count(
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 10,
+              padding: const EdgeInsets.only(
+                left: 10,
+                right: 10,
+              ),
+              childAspectRatio: 3,
+              crossAxisCount: 2,
+              scrollDirection: Axis.vertical,
+              shrinkWrap: true,
+              children: <Widget>[
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.deepPurple[50],
+                    borderRadius: BorderRadius.circular(
+                      10,
+                    ),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      'Name',
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.deepPurple[50],
+                    borderRadius: BorderRadius.circular(
+                      10,
+                    ),
+                  ),
+                  child: const Center(
+                    child:  Text(
+                      'Faysal Ibnea Hasan Jesan',
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.deepPurple[50],
+                    borderRadius: BorderRadius.circular(
+                      10,
+                    ),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      'Education',
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.deepPurple[50],
+                    borderRadius: BorderRadius.circular(
+                      10,
+                    ),
+                  ),
+                  child: const Center(
+                    child:  Text(
+                      'Daffodil International University',
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.deepPurple[50],
+                    borderRadius: BorderRadius.circular(
+                      10,
+                    ),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      'Major',
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.deepPurple[50],
+                    borderRadius: BorderRadius.circular(
+                      10,
+                    ),
+                  ),
+                  child: const Center(
+                    child:  Text(
+                      'Computer Science & Engineering',
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.deepPurple[50],
+                    borderRadius: BorderRadius.circular(
+                      10,
+                    ),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      'Address',
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.deepPurple[50],
+                    borderRadius: BorderRadius.circular(
+                      10,
+                    ),
+                  ),
+                  child: const Center(
+                    child:  Text(
+                      '97/Barabag, Mirpur-2, Dhaka -1216',
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+              ],
+            )
           ],
         ),
       ),
@@ -74,10 +235,10 @@ class HomePage extends StatelessWidget {
             width: 10,
           ),
           FloatingActionButton(
-            
             onPressed: () async {
               final prefs = await SharedPreferences.getInstance();
-              prefs.setBool('onboarding', false);//make the state for onboarding false so that onBoard pages reappear
+              prefs.setBool('onboarding',
+                  false); //make the state for onboarding false so that onBoard pages reappear
             },
             tooltip: 'Enable shared preference',
             child: const Icon(
